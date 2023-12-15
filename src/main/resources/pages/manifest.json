@@ -1,6 +1,6 @@
 {
-  "short_name": "FakeGPT",
-  "name": "FakeGPT app powered by Pandora",
+  "short_name": "ChatBot",
+  "name": "ChatBot app powered by Pandora",
   "icons": [
     {
       "src": "/apple-touch-icon.png",

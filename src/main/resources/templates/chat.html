@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="preconnect" href="{{api_prefix|safe}}" />
+    <link rel="preconnect" href="#(api_prefix)" />
     <link rel="preload" href="/fonts/soehne/soehne-buch.woff2" as="font" crossorigin="" />
     <link rel="preload" href="/fonts/soehne/soehne-halbfett.woff2" as="font" crossorigin="" />
     <link rel="preload" href="/fonts/soehne/soehne-mono-buch.woff2" as="font" crossorigin="" />
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/_next/static/css/f40b2ebfb8cc1614.css" data-n-g="" />
     <noscript data-n-css=""></noscript>
     <script>
-      window.__api_prefix = "{{api_prefix|safe}}";
+      window.__api_prefix = "#(api_prefix)";
     </script>
     <script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
     <script src="/_next/static/chunks/webpack-00de4b1a3c21b6d8.js" defer=""></script>
@@ -107,7 +107,7 @@
       <div class="absolute left-0 right-0 top-0 z-[2]"></div>
     </div>
     <script id="__NEXT_DATA__" type="application/json">
-      {{props|tojson|safe}}
+      #(props)
     </script>
     <script>
       if ("serviceWorker" in navigator) {
