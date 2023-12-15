@@ -1,5 +1,7 @@
 package com.litongjava.ai.chat.services;
 
+import cn.hutool.jwt.JWT;
+import cn.hutool.jwt.JWTPayload;
 import cn.hutool.jwt.JWTUtil;
 import com.jfinal.kit.StrKit;
 import com.litongjava.ai.chat.model.UserInfo;
@@ -71,6 +73,13 @@ public class AuthService {
       return userInfo;
     }
     return null;
+  }
+  
+
+  public JWTPayload getPayload(String value) {
+    JWT jwt = JWTUtil.parseToken(value);
+    JWTPayload payload = jwt.getPayload();
+    return payload;
   }
 
   public void logout(String value) {

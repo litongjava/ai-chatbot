@@ -1,6 +1,5 @@
 package com.litongjava.ai.chat.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,7 +55,7 @@ public class IndexController {
     // String
     // jsonString="{\"props\":{\"pageProps\":{\"user\":{\"id\":\"user-1U8VuTtQxNVHSVw5tyO2Mtng\",\"name\":\"litonglinux@gmail.com\",\"email\":\"litonglinux@gmail.com\",\"image\":\"https://s.gravatar.com/avatar/e05cff43d0249c57f29fabb0f03cea85?s=480\\u0026r=pg\\u0026d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fli.png\",\"picture\":\"https://s.gravatar.com/avatar/e05cff43d0249c57f29fabb0f03cea85?s=480\\u0026r=pg\\u0026d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fli.png\",\"idp\":\"auth0\",\"iat\":1702594920,\"mfa\":false,\"groups\":[],\"intercom_hash\":\"47bc2b0051e7029a116dd9a6122a32d014c8c4b3eeea11bd7e484fdceb7e2c65\"},\"serviceStatus\":{},\"userCountry\":\"US\",\"serviceAnnouncement\":{\"public\":{},\"paid\":{}},\"serverPrimedAllowBrowserStorageValue\":true,\"isStorageComplianceEnabled\":false,\"ageVerificationDeadline\":null,\"showCookieConsentBanner\":false,\"cfConnectingIp\":\"66.75.89.81\"},\"__N_SSP\":true},\"page\":\"/[[...default]]\",\"query\":{},\"buildId\":\"4cJ4pjOedeVdH2YA3VtTb\",\"assetPrefix\":\"https://cdn.oaistatic.com\",\"isFallback\":false,\"gssp\":true,\"scriptLoader\":[]}\r\n";
     String jsonString = JSON.toJSONString(propsValue);
-    log.info("json string:{}", jsonString);
+    //log.info("json string:{}", jsonString);
     viewData.put("props", jsonString);
     Template template = engine.getTemplate(fileName);
     String string = template.renderToString(viewData);
