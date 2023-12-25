@@ -1,0 +1,33 @@
+{
+  "action": "next",
+  "messages": [
+    {
+      "id": "aaa228ff-6c8d-46e2-b911-323c7b215169",
+      "author": {
+        "role": "user"
+      },
+      "content": {
+        "content_type": "text",
+        "parts": [
+          "What are some reasons why my linked list would appear empty after I tried reversing it?"
+        ]
+      }
+    }
+  ],
+  "parent_message_id": "aaa1a3de-39b3-4228-bbba-02f2c5b5a374",
+  "model": "gpt-4-plugins",
+  "plugin_ids": [],
+  "timezone_offset_min": 600,
+  "suggestions": [
+    "What are some reasons why my linked list would appear empty after I tried reversing it?",
+    "Can you help me brainstorm 7 ideas for a customer loyalty program? I work at a small bookstore.",
+    "Design a database schema for an online merch store."
+  ],
+  "history_and_training_disabled": false,
+  "arkose_token": "88617a36389799de4.6036732502|r=us-west-2|meta=3|metabgclr=transparent|metaiconclr=%23757575|guitextcolor=%23000000|pk=35536E1E-65B4-4D96-9D97-6ADB7EFF8147|at=40|sup=1|rid=47|ag=101|cdn_url=https%3A%2F%2Ftcr9i.chat.openai.com%2Fcdn%2Ffc|lurl=https%3A%2F%2Faudio-us-west-2.arkoselabs.com|surl=https%3A%2F%2Ftcr9i.chat.openai.com|smurl=https%3A%2F%2Ftcr9i.chat.openai.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager",
+  "conversation_mode": {
+    "kind": "primary_assistant"
+  },
+  "force_paragen": false,
+  "force_rate_limit": false
+}

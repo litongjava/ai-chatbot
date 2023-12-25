@@ -152,3 +152,5 @@ venv/
 .vs/
 Debug/
 vcpkg_installed/
+/.apt_generated/
+/.apt_generated_tests/

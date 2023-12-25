@@ -1,0 +1,26 @@
+{
+  "action": "variant",
+  "messages": [
+    {
+      "id": "aaa2e2dc-9801-47c0-a98e-cf18f9393c78",
+      "author": {
+        "role": "user"
+      },
+      "content": {
+        "content_type": "text",
+        "parts": [
+          "I want to cheer up my friend who's having a rough day. Can you suggest a couple short and sweet text messages to go with a kitten gif?"
+        ]
+      },
+      "metadata": {}
+    }
+  ],
+  "parent_message_id": "aaa16967-c8a0-4ca3-8f65-c0e7d96b57c3",
+  "model": "text-davinci-002-render-sha",
+  "plugin_ids": [],
+  "timezone_offset_min": 600,
+  "variant_purpose": "none",
+  "history_and_training_disabled": false,
+  "arkose_token": "26617a3a5897bb8c6.6096816902|r=us-west-2|meta=3|metabgclr=transparent|metaiconclr=%23757575|guitextcolor=%23000000|pk=35536E1E-65B4-4D96-9D97-6ADB7EFF8147|at=40|sup=1|rid=29|ag=101|cdn_url=https%3A%2F%2Fclient-api.arkoselabs.com%2Fcdn%2Ffc|lurl=https%3A%2F%2Faudio-us-west-2.arkoselabs.com|surl=https%3A%2F%2Fclient-api.arkoselabs.com|smurl=https%3A%2F%2Fclient-api.arkoselabs.com%2Fcdn%2Ffc%2Fassets%2Fstyle-manager",
+  "force_paragen": false
+}

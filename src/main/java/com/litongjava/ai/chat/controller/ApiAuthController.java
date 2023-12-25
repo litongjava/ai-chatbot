@@ -6,11 +6,11 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
-import org.checkerframework.checker.units.qual.Acceleration;
 
 import com.litongjava.ai.chat.model.UserInfo;
 import com.litongjava.ai.chat.services.AuthService;
 import com.litongjava.jfinal.aop.Aop;
+import com.litongjava.jfinal.aop.annotation.Controller;
 import com.litongjava.tio.http.common.Cookie;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
@@ -21,6 +21,7 @@ import cn.hutool.core.convert.Convert;
 import cn.hutool.jwt.JWTPayload;
 import lombok.extern.slf4j.Slf4j;
 
+@Controller
 @RequestPath("/api/auth")
 @Slf4j
 public class ApiAuthController {
@@ -33,14 +34,15 @@ public class ApiAuthController {
     if (cookie == null) {
       Resps.redirect(reuqest, "/login");
     }
+    ClassLoader classLoader = this.getClass().getClassLoader();
+    log.info("classLoader:{}", classLoader);
     UserInfo userInfo = authService.getUserInfo(cookie.getValue());
-    if (userInfo == null) {
-      Resps.redirect(reuqest, "/login");
-    }
+    ClassLoader classLoader2 = userInfo.getClass().getClassLoader();
+    log.info("classLoader2:{}", classLoader2);
     JWTPayload payload = authService.getPayload(cookie.getValue());
     Object claim = payload.getClaim("exp");
     Long unixTimestamp = Convert.toLong(claim);
-    log.info("unixTimestamp:{}",claim);
+    log.info("unixTimestamp:{}", claim);
 
     Instant instant = Instant.ofEpochSecond(unixTimestamp);
     ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneOffset.UTC);
@@ -55,8 +57,8 @@ public class ApiAuthController {
   }
 
   @RequestPath("/csrf")
-  public Map<String,Object> csrf() {
-    Map<String,Object> data=new HashMap<>(1);
+  public Map<String, Object> csrf() {
+    Map<String, Object> data = new HashMap<>(1);
     data.put("csrfToken", "ca8a67e09fc1b14d5146184efeeeb7e42dd247e1772e1f728e6e802cbcfe414e");
     return data;
   }
@@ -64,10 +66,10 @@ public class ApiAuthController {
   @RequestPath("/signout")
   public HttpResponse signout(HttpRequest request) {
     Cookie cookie = request.getCookie("access-token");
-    if(cookie!=null) {
+    if (cookie != null) {
       authService.logout(cookie.getValue());
     }
-    Map<String,Object> data=new HashMap<>();
+    Map<String, Object> data = new HashMap<>();
     data.put("url", "/login");
     HttpResponse response = Resps.json(request, data);
     response.addCookie(new Cookie(null, "access-token", "", null));

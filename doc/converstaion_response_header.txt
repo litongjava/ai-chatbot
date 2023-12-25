@@ -1,0 +1,23 @@
+Access-Control-Allow-Credentials:true
+Access-Control-Allow-Origin:https://chat.openai.com
+Alt-Svc:h3=":443"; ma=86400
+Cache-Control:no-cache
+Cf-Cache-Status:DYNAMIC
+Cf-Ray:83aeb780fa5a6a1a-HNL
+Content-Security-Policy:default-src 'self'; script-src 'self' 'nonce-pub1f79f8ac903a5872ae5f53026d20a77c' 'unsafe-inline' 'unsafe-eval' js.stripe.com https://chat.openai.com js.intercomcdn.com https://tcr9i.chat.openai.com https://oaistatic.com https://*.oaistatic.com https://chatgpt.com https://widget.intercom.io https://*.chatgpt.com; script-src-elem 'unsafe-inline' js.stripe.com https://chat.openai.com js.intercomcdn.com https://tcr9i.chat.openai.com challenges.cloudflare.com https://oaistatic.com https://*.oaistatic.com https://chatgpt.com auth0.openai.com https://widget.intercom.io https://*.chatgpt.com; img-src * 'self' data: https:; style-src 'self' 'unsafe-inline' https://chat.openai.com https://*.oaistatic.com https://chatgpt.com https://tcr9i.chat.openai.com https://*.chatgpt.com https://oaistatic.com; font-src 'self' data: https://*.oaistatic.com; connect-src 'self' statsigapi.net https://chat.openai.com wss://fp-async-webps-staging.webpubsub.azure.com *.oaiusercontent.com https://events.statsigapi.net api-js.mixpanel.com https://tcr9i.chat.openai.com fileserviceuploadsperm.blob.core.windows.net o33249.ingest.sentry.io wss://fp-async-webps-prod.webpubsub.azure.com https://featuregates.org https://oaistatic.com http://localhost:* https://*.oaistatic.com https://chatgpt.com api-iam.intercom.io https://*.chatgpt.com rum.browser-intake-datadoghq.com; frame-src tcr9i.chat.openai.com challenges.cloudflare.com js.stripe.com; worker-src blob:; report-uri https://csp-report.browser-intake-datadoghq.com/api/v2/logs?dd-api-key=pub1f79f8ac903a5872ae5f53026d20a77c&dd-evp-origin=content-security-policy&ddsource=csp-report;
+
+Content-Type:text/event-stream; charset=utf-8
+Cross-Origin-Opener-Policy:same-origin
+Date:Mon, 25 Dec 2023 05:34:46 GMT
+Nel:{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Referrer-Policy:strict-origin-when-cross-origin
+Report-To:{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ciCVO5%2BoDkXR5bjqMnaRZS3PhewMJVYTsk486WKEHMB0nqZo60QoHSqBPutiVc5%2F%2FOAtWiMgnWlL%2Bjfgs%2FMe%2F021SQq3q%2FoInA77ETspLucw3NTf0LWRoVwwn4wN%2F3T87g%3D%3D"}],"group":"cf-nel","max_age":604800}
+
+Server:cloudflare
+Set-Cookie:_uasid="Z0FBQUFBQmxpUlIyY09pOWl5c1pLQVBnQnlxdUk1b0tNY2l2ZEZWWHExdVlEdkJ4SS1fRGVjblE5U3F4Tnpvb1ZqOHF1WWp3dWFTSURZVGlSX2YxbkdiazF2ekMwZHJQUHVxWXFRQmpSRUdSV0d4WlRRc1hLY1k4Q2JCeE54RmdROVZsZUtmY2Fad0pidlBfUHBBa1VHM1E3akVOaVhGUEN3Mm4tRml3dlJiNnE4ZTIxQ2k1Z1llRFMtblpCRktTTThQWEhqRFdCMU1vR1I0akRBc2lSeWpnbmVETmFIbTVzdUFmM1BoVDFIUXBGQjJxb2RyMEtfTDNPZVo1WHhabjVqNUVRcmlFM1BDTkpfaUNBTTVSdHpsS0hsMXFMQjJYZlRUaE0wUDdkV3lpbmpWOFFTRW1HVnFWTFRkeXJvVjVWQmw0OGQ1VnN5YTl3MUhVTUplQnowUXR6S1ZVelpiRXN3PT0="; expires=Mon, 25 Dec 2023 06:04:46 GMT; HttpOnly; Path=/; SameSite=none; Secure
+Set-Cookie:_umsid="Z0FBQUFBQmxpUlIyb3Z1Z0RXc2Yyc0t0N1lTdTc1UUVWV0ZrbXRJMUZ6YllSVU10T0k3bXVGdC1JNm9fMmdRbkFyUU5IT2Y4TW5nQm52VDFTQTlRMXZ2eHJGRFBVcmZRcDVUaURXZGt5VDZndjZYREhPQUdWS2REWjAzUzcwYTE0SjZ1X1JxUVpXUlRzSTVFNm85X2Q2dEZpRzZIZlJWUVFOUWVaZ1h1VzBhZUNack1hTFlPc0haUm5oYVFiaHE4cnUxQ1hBS05yU1dLbmhGaU5nOW50ajJrS19LQk9nQTZpVlFPbHgxaFlna1RmQzRxYzJQX1M4TT0="; expires=Mon, 25 Dec 2023 06:04:46 GMT; HttpOnly; Path=/; SameSite=none; Secure
+Strict-Transport-Security:max-age=31536000; includeSubDomains; preload
+Vary:Origin
+X-Content-Type-Options:nosniff
+X-Envoy-Upstream-Service-Time:440
+X-Robots-Tag:nofollow

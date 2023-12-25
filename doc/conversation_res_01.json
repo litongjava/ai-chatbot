@@ -1,0 +1,30 @@
+{
+  "message": {
+    "id": "4a9fb037-2d99-4027-a252-80979954cea0",
+    "author": {
+      "role": "assistant",
+      "name": null,
+      "metadata": {}
+    },
+    "create_time": 1703325153.78043,
+    "update_time": null,
+    "content": {
+      "content_type": "text",
+      "parts": [
+        ""
+      ]
+    },
+    "status": "in_progress",
+    "end_turn": null,
+    "weight": 1.0,
+    "metadata": {
+      "inline_gizmo_id": "g-CFsXuTRfy",
+      "message_type": "next",
+      "model_slug": "gpt-4-gizmo",
+      "parent_id": "aaa24d0c-a937-498d-8584-7286cb84dbff"
+    },
+    "recipient": "all"
+  },
+  "conversation_id": "12f45214-6887-4ed4-af96-db7ba34e042e",
+  "error": null
+}

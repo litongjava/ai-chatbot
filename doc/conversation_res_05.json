@@ -1,0 +1,10 @@
+{
+  "conversation_id": "12f45214-6887-4ed4-af96-db7ba34e042e",
+  "message_id": "4a9fb037-2d99-4027-a252-80979954cea0",
+  "is_completion": true,
+  "moderation_response": {
+    "flagged": false,
+    "blocked": false,
+    "moderation_id": "modr-8YsyU85bT6nN6sP3H9EmLkiUfow8m"
+  }
+}

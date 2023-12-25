@@ -9,6 +9,7 @@ import com.jfinal.template.Template;
 import com.litongjava.ai.chat.services.AuthService;
 import com.litongjava.ai.chat.validator.AuthValidator;
 import com.litongjava.jfinal.aop.Aop;
+import com.litongjava.jfinal.aop.annotation.Controller;
 import com.litongjava.tio.http.common.Cookie;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
@@ -16,12 +17,15 @@ import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.Resps;
 import com.litongjava.tio.utils.resp.RespVo;
 
+@Controller
 @RequestPath("/auth")
 public class AuthController {
 
   private AuthService authService = Aop.get(AuthService.class);
   private AuthValidator authValidator = Aop.get(AuthValidator.class);
-  private Engine engine = Aop.get(Engine.class);
+  //private Engine engine = Aop.get(Engine.class);
+  private Engine engine;
+  //= Aop.get(Engine.class);
 
   @RequestPath("/login")
   public HttpResponse login(HttpRequest request, String next, String username, String password, String mfa_code,

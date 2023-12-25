@@ -10,25 +10,29 @@ import com.jfinal.template.Template;
 import com.litongjava.ai.chat.model.UserInfo;
 import com.litongjava.ai.chat.services.AuthService;
 import com.litongjava.jfinal.aop.Aop;
+import com.litongjava.jfinal.aop.Autowired;
+import com.litongjava.jfinal.aop.annotation.Controller;
 import com.litongjava.tio.http.common.Cookie;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
+import com.litongjava.tio.http.server.annotation.EnableCORS;
 import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.Resps;
 
-import lombok.extern.slf4j.Slf4j;
-
+@Controller
 @RequestPath("")
-@Slf4j
+@EnableCORS
 public class IndexController {
-
-  private Engine engine = Aop.get(Engine.class);
+  @Autowired
+  private Engine engine;
+  //= Aop.get(Engine.class);
 
   @RequestPath("/")
   public HttpResponse index(HttpRequest request) {
     //String remoteIp = request.getRemote().getIp();
     String remoteIp = "127.0.0.1";
-
+    
+    
     Cookie cookie = request.getCookie("access-token");
     if (cookie == null) {
       return Resps.redirect(request, "/login");
@@ -62,7 +66,7 @@ public class IndexController {
     return string;
   }
 
-  @RequestPath("/{type}/{conversationId}")
+  @RequestPath("/c/{conversationId}")
   public HttpResponse detail(HttpRequest request, String type, String conversationId) {
     String remoteIp = "127.0.0.1";
     Cookie cookie = request.getCookie("access-token");

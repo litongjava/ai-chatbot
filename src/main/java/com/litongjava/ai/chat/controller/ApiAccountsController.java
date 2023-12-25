@@ -6,11 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson2.JSON;
+import com.litongjava.jfinal.aop.annotation.Controller;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
 import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.Resps;
 
+@Controller
 @RequestPath("/api/accounts")
 @SuppressWarnings("serial")
 public class ApiAccountsController {

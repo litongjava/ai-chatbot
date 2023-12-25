@@ -1,0 +1,122 @@
+{
+  "items": [
+    {
+      "id": "plugin-014c6bf6-bc10-4762-abe5-8ba5f67005c9",
+      "domain": "chatvideo.mixerbox.com",
+      "namespace": "MixerBox_ChatVideo_YouTube_video_summarizer",
+      "status": "approved",
+      "manifest": {
+        "schema_version": "v1",
+        "name_for_model": "MixerBox_ChatVideo_YouTube_video_summarizer",
+        "name_for_human": "MixerBox ChatVideo",
+        "description_for_model": "MixerBox ChatVideo is an efficient tool for organizing various videos. It leverages transcripts, metadata, and other information from video providers such as YouTube to instantly summarize the key points of the videos. This allows users to quickly grasp the content without having to watch the entire video.\nThe usage is simple - users just need to upload the URL of the video they are interested in, whether it's a restaurant introduction, movie review, news highlights, current affairs discussions, cooking recipes, tourist attractions, or even a full-length drama or variety show.\nMixerBox ChatVideo swiftly organizes the video content and presents it to the users. Users can further inquire about the organized content, such as restaurant ratings, establishment information, related news content, accommodation and transportation options for tourist attractions.",
+        "description_for_human": "Summarize videos from YouTube! Ask questions and get answers right away!",
+        "auth": {
+          "type": "service_http",
+          "instructions": "",
+          "authorization_type": "bearer",
+          "verification_tokens": {
+            "openai": "5e62144cda764f3ca70dbdeb9de9079e"
+          },
+          "custom_auth_header": null
+        },
+        "api": {
+          "type": "openapi",
+          "url": "https://chatvideo.mixerbox.com/.well-known/openapi.json"
+        },
+        "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/ChatVideo_logo.png",
+        "contact_email": "support@chatvideo.mixerbox.com",
+        "legal_info_url": "https://www.mixerbox.com"
+      },
+      "oauth_client_id": null,
+      "user_settings": {
+        "is_installed": true,
+        "is_authenticated": true
+      },
+      "categories": [
+        {
+          "id": "newly_added",
+          "title": "New"
+        }
+      ],
+      "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/ChatVideo_logo.png"
+    },
+    {
+      "id": "plugin-b4bd67b9-6acc-43d3-9a74-1d22dbef6d43",
+      "domain": "translate.mixerbox.com",
+      "namespace": "MixerBox_Translate_AI_language_tutor",
+      "status": "approved",
+      "manifest": {
+        "schema_version": "v1",
+        "name_for_model": "MixerBox_Translate_AI_language_tutor",
+        "name_for_human": "MixerBox Translate",
+        "description_for_model": "MixerBox Translate is a versatile translation plugin that supports mutual translation and language learning between multiple languages. It not only helps users understand the meanings and usage of words but also provides pronunciation and phrase usage for foreign words. Additionally, it offers simulated conversations in specific contexts, enabling users to better handle real-life language interactions. MixerBox Translate combines the functions of translation, language learning, and practical application, making it a highly useful tool. In today's globalized world, overcoming language barriers is an undeniable challenge. However, with the advancement of technology, translation and language learning tools make language acquisition easier for us. These tools provide convenient ways to translate texts, learn new languages, understand cultural differences, and play a vital role in cross-lingual communication.",
+        "description_for_human": "Translate any language right away! Learn foreign languages easily by conversing with AI tutors!",
+        "auth": {
+          "type": "none"
+        },
+        "api": {
+          "type": "openapi",
+          "url": "https://translate.mixerbox.com/.well-known/openapi.json"
+        },
+        "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/Translate_logo.png",
+        "contact_email": "support@translate.mixerbox.com",
+        "legal_info_url": "https://www.mixerbox.com"
+      },
+      "oauth_client_id": null,
+      "user_settings": {
+        "is_installed": true,
+        "is_authenticated": true
+      },
+      "categories": [
+        {
+          "id": "newly_added",
+          "title": "New"
+        }
+      ],
+      "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/Translate_logo.png"
+    },
+    {
+      "id": "plugin-b7ad9a4a-2b08-40a9-8f77-e30a5ea4993c",
+      "domain": "websearchg.mixerbox.com",
+      "namespace": "MixerBox_WebSearchG_web_search",
+      "status": "approved",
+      "manifest": {
+        "schema_version": "v1",
+        "name_for_model": "MixerBox_WebSearchG_web_search",
+        "name_for_human": "MixerBox WebSearchG",
+        "description_for_model": "MixerBox WebSearchG enables users to browse search engine results within the chat interface effortlessly. Users can effortlessly browse search results without leaving the conversation. With a simple question or topic search, users can explore search results directly within the conversation. MixerBox WebSearchG offers clickable links, descriptive titles, and concise summaries for each result. No matter the context, MixerBox WebSearchG caters to users' needs. Whether users are engaged in a casual conversation, conducting research, or seeking quick access to information, MixerBox WebSearchG can provide information accordingly. Moreover, users can effortlessly find relevant articles, blog posts, or product reviews without having to open multiple tabs or leave the chat interface. Other than that, when users need to settle a debate or fact-check a statement, MixerBox WebSearchG can quickly retrieve trustworthy search results to provide related information. From staying updated with the latest news to exploring various perspectives on a topic, it empowers users to navigate the web seamlessly, saving time and enhancing the overall chat experience. In addition to browsing top search engine results, users can also conveniently extract summaries of web page content by simply pasting a URL. Whether it's an article, a blog post, or any webpage, MixerBox WebSearchG swiftly analyzes the content and provides concise and informative summaries. This feature eliminates the need to read through entire web pages, saving time and allowing users to quickly grasp the essence of the information they need. With the extracted summaries at their fingertips, users can seamlessly interact with WebSearchG, issuing commands like translation or asking specific questions about the article. This enhanced functionality empowers users to delve deeper into the content without having to read the entire webpage. From translating to gaining insights, MixerBox WebSearchG streamlines the information retrieval process, providing a comprehensive toolset within the chat interface. ",
+        "description_for_human": "Search and summarize the web with our customized search engine powered by Google Search API!",
+        "auth": {
+          "type": "service_http",
+          "instructions": "",
+          "authorization_type": "bearer",
+          "verification_tokens": {
+            "openai": "64c6984560ea4bf5ac266b96f88e688a"
+          },
+          "custom_auth_header": null
+        },
+        "api": {
+          "type": "openapi",
+          "url": "https://websearchg.mixerbox.com/.well-known/openapi.json"
+        },
+        "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/WebSearchG_logo.png",
+        "contact_email": "support@websearchg.mixerbox.com",
+        "legal_info_url": "https://websearchg.mixerbox.com"
+      },
+      "oauth_client_id": null,
+      "user_settings": {
+        "is_installed": true,
+        "is_authenticated": true
+      },
+      "categories": [
+        {
+          "id": "most_popular",
+          "title": "Most popular"
+        }
+      ],
+      "logo_url": "https://static.mixerbox.com/chatai/chatgpt-plugin/WebSearchG_logo.png"
+    }
+  ],
+  "count": 3
+}
