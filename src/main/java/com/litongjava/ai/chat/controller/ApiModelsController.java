@@ -5,10 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.litongjava.tio.http.server.annotation.RequestPath;
+import com.litongjava.annotation.RequestPath;
 
 @RequestPath("/api/models")
 public class ApiModelsController {
+
   @RequestPath
   public Map<String, Object> index(Boolean history_and_training_disabled) {
     Map<String, Object> map = new HashMap<>();
@@ -30,7 +31,7 @@ public class ApiModelsController {
     map_models_item_1.put("slug", "gpt-4");
     map_models_item_1.put("max_tokens", 32767);
     map_models_item_1.put("title", "GPT-4 (All Tools)");
-    map_models_item_1.put("description", "Browsing, Advanced Data Analysis, and DALL\u8defE are now built into GPT-4");
+    map_models_item_1.put("description", "Browsing, Advanced Data Analysis, and DALL E are now built into GPT-4");
     List<Object> map_models_item_1_tags = new ArrayList<>();
     map_models_item_1_tags.add("gpt4");
     map_models_item_1.put("tags", map_models_item_1_tags);
@@ -100,7 +101,7 @@ public class ApiModelsController {
     map_models_item_3.put("slug", "gpt-4-magic-create");
     map_models_item_3.put("max_tokens", 32767);
     map_models_item_3.put("title", "GPT Creator");
-    map_models_item_3.put("description", "Browsing, Advanced Data Analysis, and DALL\u8defE are now built into GPT-4");
+    map_models_item_3.put("description", "Browsing, Advanced Data Analysis, and DALL E are now built into GPT-4");
     List<Object> map_models_item_3_tags = new ArrayList<>();
     map_models_item_3_tags.add("plus");
     map_models_item_3_tags.add("hidden");
@@ -156,7 +157,7 @@ public class ApiModelsController {
     map_models_item_4.put("slug", "gpt-4-gizmo");
     map_models_item_4.put("max_tokens", 32767);
     map_models_item_4.put("title", "GPTs");
-    map_models_item_4.put("description", "Browsing, Advanced Data Analysis, and DALL\u8defE are now built into GPT-4");
+    map_models_item_4.put("description", "Browsing, Advanced Data Analysis, and DALL E are now built into GPT-4");
     List<Object> map_models_item_4_tags = new ArrayList<>();
     map_models_item_4_tags.add("plus");
     map_models_item_4_tags.add("hidden");

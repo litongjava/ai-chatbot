@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.litongjava.tio.http.server.annotation.RequestPath;
+import com.litongjava.annotation.RequestPath;
 
 //@Controller
 @RequestPath("/api/aip")

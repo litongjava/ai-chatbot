@@ -7,10 +7,7 @@ import java.util.Map;
 
 import com.jfinal.kit.StrKit;
 import com.litongjava.ai.chat.model.UserInfo;
-
-import cn.hutool.jwt.JWT;
-import cn.hutool.jwt.JWTPayload;
-import cn.hutool.jwt.JWTUtil;
+import com.litongjava.tio.utils.jwt.JwtUtils;
 
 /**
  * Created by litonglinux@qq.com on 12/14/2023_12:31 PM
@@ -22,7 +19,8 @@ public class AuthService {
   private String image = "";
 
   // 使用HmacSHA256签名算法的密钥
-  byte[] key = "litongjava".getBytes();
+  String key = "litongjava";
+
   // 用于存储tokens的Map
   // username,access_token
   private static Map<String, String> tokenStore = new HashMap<>();
@@ -40,7 +38,7 @@ public class AuthService {
     payload.put("exp", expiration.getTime() / 1000); // JWT通常使用秒为单位的时间戳
 
     // 生成JWT token
-    String accessToken = JWTUtil.createToken(payload, key);
+    String accessToken = JwtUtils.createToken(key, payload);
     // 将token存储到Map中
     tokenStore.put(username, accessToken);
     userStore.put(accessToken, username);
@@ -49,14 +47,14 @@ public class AuthService {
 
   public boolean isValidToken(String token) {
     // 使用相同的密钥验证token
-    return JWTUtil.verify(token, key);
+    return JwtUtils.verify(key, token);
   }
 
   public UserInfo getUserInfo(String accessToken) {
     if (StrKit.isBlank(accessToken)) {
       return null;
     }
-    if (JWTUtil.verify(accessToken, key)) {
+    if (JwtUtils.verify(key, accessToken)) {
       String username = userStore.get(accessToken);
       if (username == null) {
         // 原因可能是服务器重启
@@ -74,13 +72,6 @@ public class AuthService {
       return userInfo;
     }
     return null;
-  }
-  
-
-  public JWTPayload getPayload(String value) {
-    JWT jwt = JWTUtil.parseToken(value);
-    JWTPayload payload = jwt.getPayload();
-    return payload;
   }
 
   public void logout(String value) {

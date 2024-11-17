@@ -1,26 +1,21 @@
 package com.litongjava.ai.chat.config;
 
 import com.jfinal.template.Engine;
-import com.litongjava.jfinal.aop.annotation.Bean;
-import com.litongjava.jfinal.aop.annotation.Configuration;
-import com.litongjava.tio.boot.constatns.ConfigKeys;
-import com.litongjava.tio.utils.environment.EnvironmentUtils;
+import com.litongjava.annotation.AConfiguration;
+import com.litongjava.annotation.Initialization;
+import com.litongjava.tio.utils.environment.EnvUtils;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Configuration
+@AConfiguration
 @Slf4j
 public class EnjoyEngineConfig {
-  
-  public EnjoyEngineConfig() {
-    log.info(this.getClass().getClassLoader().toString());
-  }
 
   private final String RESOURCE_BASE_PATH = "/templates/";
 
-  @Bean
+  @Initialization
   public Engine engine() {
-    String mode = EnvironmentUtils.getStr(ConfigKeys.tioDevMode);
+    String mode = EnvUtils.getEnv();
 
     Engine engine = Engine.use();
     engine.setBaseTemplatePath(RESOURCE_BASE_PATH);

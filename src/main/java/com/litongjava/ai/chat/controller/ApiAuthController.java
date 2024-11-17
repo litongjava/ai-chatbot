@@ -9,19 +9,16 @@ import java.util.Map;
 
 import com.litongjava.ai.chat.model.UserInfo;
 import com.litongjava.ai.chat.services.AuthService;
+import com.litongjava.annotation.RequestPath;
 import com.litongjava.jfinal.aop.Aop;
-import com.litongjava.jfinal.aop.annotation.Controller;
 import com.litongjava.tio.http.common.Cookie;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
-import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.Resps;
+import com.litongjava.tio.utils.jwt.JwtUtils;
 
-import cn.hutool.core.convert.Convert;
-import cn.hutool.jwt.JWTPayload;
 import lombok.extern.slf4j.Slf4j;
 
-@Controller
 @RequestPath("/api/auth")
 @Slf4j
 public class ApiAuthController {
@@ -34,14 +31,12 @@ public class ApiAuthController {
     if (cookie == null) {
       Resps.redirect(reuqest, "/login");
     }
-    ClassLoader classLoader = this.getClass().getClassLoader();
-    log.info("classLoader:{}", classLoader);
     UserInfo userInfo = authService.getUserInfo(cookie.getValue());
-    ClassLoader classLoader2 = userInfo.getClass().getClassLoader();
-    log.info("classLoader2:{}", classLoader2);
-    JWTPayload payload = authService.getPayload(cookie.getValue());
-    Object claim = payload.getClaim("exp");
-    Long unixTimestamp = Convert.toLong(claim);
+    Map<String, Object> payload = JwtUtils.getPayload(cookie.getValue());
+
+    Object claim = payload.get("exp");
+    Long unixTimestamp = (Long) (claim);
+
     log.info("unixTimestamp:{}", claim);
 
     Instant instant = Instant.ofEpochSecond(unixTimestamp);

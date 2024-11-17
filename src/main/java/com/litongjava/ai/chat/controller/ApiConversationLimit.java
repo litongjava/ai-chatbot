@@ -3,7 +3,7 @@ package com.litongjava.ai.chat.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.litongjava.tio.http.server.annotation.RequestPath;
+import com.litongjava.annotation.RequestPath;
 
 @RequestPath("/api")
 public class ApiConversationLimit {

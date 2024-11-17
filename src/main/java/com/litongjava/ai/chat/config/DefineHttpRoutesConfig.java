@@ -1,22 +1,20 @@
 package com.litongjava.ai.chat.config;
 
 import com.litongjava.ai.chat.controller.HelloController;
+import com.litongjava.annotation.AConfiguration;
+import com.litongjava.annotation.Initialization;
 import com.litongjava.jfinal.aop.Aop;
-import com.litongjava.jfinal.aop.annotation.Bean;
-import com.litongjava.jfinal.aop.annotation.BeforeStartConfiguration;
-import com.litongjava.tio.http.server.handler.HttpRoutes;
-import com.litongjava.tio.http.server.handler.SimpleHttpRoutes;
+import com.litongjava.tio.boot.server.TioBootServer;
+import com.litongjava.tio.http.server.router.HttpRequestRouter;
 
-@BeforeStartConfiguration
+@AConfiguration
 public class DefineHttpRoutesConfig {
 
-  @Bean
-  public HttpRoutes httpRoutes() {
+  @Initialization
+  public void httpRoutes() {
+    HttpRequestRouter r = TioBootServer.me().getRequestRouter();
     HelloController helloController = Aop.get(HelloController.class);
-    HttpRoutes simpleHttpRoutes = new SimpleHttpRoutes();
-    simpleHttpRoutes.add("/hi", helloController::hi);
-    simpleHttpRoutes.add("/hello", helloController::hello);
-    return simpleHttpRoutes;
+    r.add("/hi", helloController::hi);
+    r.add("/hello", helloController::hello);
   }
-
 }

@@ -3,13 +3,11 @@ package com.litongjava.ai.chat.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.litongjava.jfinal.aop.annotation.Controller;
+import com.litongjava.annotation.RequestPath;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
-import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.Resps;
 
-@Controller
 @RequestPath("/api/lat")
 public class ApiLlatController {
 

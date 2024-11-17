@@ -3,10 +3,11 @@ package com.litongjava.ai.chat.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.litongjava.tio.http.server.annotation.RequestPath;
+import com.litongjava.annotation.RequestPath;
 
 @RequestPath("/api/referral")
 public class ApiRreferral {
+  
   public Map<String,Object> invites(){
     //{"status":"success","claimed_invites":0,"invites_remaining":0,"invite_codes":[]}
     Map<String,Object> jsonMap=new HashMap<>(1);
