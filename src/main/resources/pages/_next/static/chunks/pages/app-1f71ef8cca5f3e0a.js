@@ -48926,8 +48926,8 @@ ${et.comment}`
         ec = en(88798),
         ed = en(82534),
         ef = "35536E1E-65B4-4D96-9D97-6ADB7EFF8147",
-        eh = "https://client-api.arkoselabs.com/v2/".concat(ef, "/api.js"),
-        //eh = "/arkoselabs/v2/".concat(ef, "/api.js"),
+        // eh = "https://client-api.arkoselabs.com/v2/".concat(ef, "/api.js"),
+        eh = "/arkoselabs/v2/".concat(ef, "/api.js"),
         ep = "enforcement-container";
       !(function (Y) {
         (Y.Idle = "idle"),
