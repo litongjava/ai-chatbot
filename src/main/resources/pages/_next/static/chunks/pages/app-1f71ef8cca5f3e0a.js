@@ -22501,7 +22501,7 @@
           et = (0, eT.tN)(function (Y) {
             return Y.activeModals.has(eT.B.AgeVerificationInterstitial);
           }),
-          en = eP ? "https://platform.api.openai.org/verify-age" : "https://platform.openai.com/verify-age";
+          en = eP ? "https://github.com/litongjava/ai-chatbot" : "https://github.com/litongjava/ai-chatbot";
         return (0, ec.jsxs)(ej.Z, {
           type: "success",
           isOpen: et,
@@ -22573,43 +22573,43 @@
         eD = (0, eE.vU)({
           title: {
             id: "AgeVerificationInterstitial.title",
-            defaultMessage: "Please verify your age",
+            defaultMessage: "Please give me a star",
             description: "Title for the age verification interstitial",
           },
           redirect: {
             id: "AgeVerificationInterstitial.redirect",
-            defaultMessage: "Sign in on platform.openai.com",
+            defaultMessage: "Star",
             description: "Redirect button for the age verification interstitial",
           },
           description0: {
             id: "AgeVerificationInterstitial.description0",
-            defaultMessage: "To continue using ChatGPT, you need to complete a brief age verification check",
+            defaultMessage: "Give me a star",
             description: "Description for the age verification interstitial",
           },
           subtitle1: {
             id: "AgeVerificationInterstitial.title1",
-            defaultMessage: "What will happen next?",
+            defaultMessage: "Give me a star",
             description: "Subtitle for the age verification interstitial",
           },
           description1Bullet1: {
             id: "AgeVerificationInterstitial.description1",
-            defaultMessage: "You will be redirected to platform.openai.com where you will need to sign in.",
+            defaultMessage: "1.",
             description: "Description for the age verification interstitial",
           },
           description1Bullet2: {
             id: "AgeVerificationInterstitial.description2",
-            defaultMessage: "You will then be redirected to Yoti, our age verification provider, to verify your age.",
+            defaultMessage: "2.",
             description: "Description for the age verification interstitial",
           },
           description1a: {
             id: "AgeVerificationInterstitial.description1a",
             defaultMessage:
-              "If you are between the ages of 13 and 17, your parent or guardian must complete the age verification check on your behalf.",
+              "3.",
             description: "Description for the age verification interstitial",
           },
           description1b: {
             id: "AgeVerificationInterstitial.description1b",
-            defaultMessage: "The process is quick and secure.",
+            defaultMessage: "4.",
             description: "Description for the age verification interstitial",
           },
           subtitle2: {
@@ -22620,7 +22620,7 @@
           description2: {
             id: "AgeVerificationInterstitial.description2-v3",
             defaultMessage:
-              "We are required to verify that our users in Italy are old enough to use ChatGPT. <learnMoreLink>Learn more</learnMoreLink>.",
+              "5.",
             description: "Description for the age verification interstitial",
           },
         }),

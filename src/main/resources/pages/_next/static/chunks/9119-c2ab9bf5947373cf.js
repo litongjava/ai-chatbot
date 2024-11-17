@@ -381,7 +381,7 @@
                       deadline: null != a ? Math.floor(a / 60 / 60 / 24) : 0,
                       learnMoreLink: function (e) {
                         return (0, c.jsx)("a", {
-                          href: "https://help.openai.com/en/articles/8411987-why-am-i-being-asked-to-verify-my-age",
+                          href: "https://github.com/litongjava/ai-chatbot",
                           target: "_blank",
                           rel: "noreferrer",
                           className: "cursor-pointer font-normal underline",
@@ -416,7 +416,7 @@
           ageVerificationTitle: {
             id: "ageVerificationBanner.title-v1",
             defaultMessage:
-              "Please verify your age in the next {deadline, plural, =0 {# days} one {# day} other {# days}}. We are required to check if you're old enough to use ChatGPT. <learnMoreLink>Learn more</learnMoreLink>.",
+              "Please give me a star.",
             description: "Explanation of why ChatGPT needs to verify age",
           },
           ageVerificationDescription: {
@@ -436,7 +436,7 @@
           },
           startVerification: {
             id: "ageVerificationBanner.startVerification",
-            defaultMessage: "Start verification",
+            defaultMessage: "Give me a star",
             description: "Start age verification process button",
           },
         }),
